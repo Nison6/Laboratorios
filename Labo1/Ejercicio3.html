@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Formulario</title> </head>
+    <body>
+        <h1> FAKE E-mail sign up </h1>
+        <form action="index3.html" method="GET">
+            <fieldset>
+                <legend>Personal Information: </legend>
+                <p>Names: <input type = "text" name = "nombre" size = "15" placeholder="Victor"> 
+                    <input type="text" name="nombre" size="15" placeholder="Edenilson"> </p>
+                <p> Last Names: <input type="text" name="apellido" size="15" placeholder="Morales"
+                    > <input type="text" name="apellido" size="15" placeholder="Constanza" > </p>
+                <p>Birthday: <input type="date" name = "fecha" size="25"></p>
+                <p>Gender: <input type="radio" name="radio1" value="F"> F 
+                <input type="radio" name="radio2" value="M"> M  Other:
+                <input type="text" name="otro" size="15" >  </p>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Sing Up Information: </legend>
+                <p>E-mail: <input type="email" name="e-mail" size="20"> </p>
+                <p> PassWord: <input type="password" name="password" placeholder=" Contraseña" required> </p>
+                <p>Verify PassWord: <input type="password" name="password" placeholder=" Contraseña" required > </p>
+            </fieldset>
+
+            <input type="submit" name="submitButton" value="send" >
+            <input type="reset" name="resetButton" value="Reset Fields " >
+            
+        </form>
+    </body>
+</html>
