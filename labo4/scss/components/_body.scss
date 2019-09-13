@@ -1,0 +1,25 @@
+body{
+    @include set-dimensions(100%, auto);
+    display: flex;
+}
+.container{
+    background-color: aqua;
+    .imagen{
+        .titulo{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        border: 2px;
+        }
+        width: 10em;
+        margin: 0.5em;
+        border-radius: 100%;
+
+        display: flex;
+
+        flex-flow: row wrap;
+        justify-content: center;
+        border: 2px transparent;
+
+    }
+}
