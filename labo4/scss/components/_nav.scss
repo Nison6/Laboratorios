@@ -1,4 +1,5 @@
-nav{
-    @include set-dimensions(100%, auto);
-    display: flex;
+
+@mixin set-dimensions ($width,$height) {
+    width: $width;
+    height: $height;
 }
