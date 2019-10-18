@@ -1,3 +1,4 @@
+var idContainer = 0;
 var parseLateSwitch = value => {
     if(value){
         return "tarde";
@@ -6,10 +7,10 @@ var parseLateSwitch = value => {
 }
 
 function addStudent(carnet, schedule, late, tbody) {
-    let rewNow = document.createElement("tr");
+    let newRow = document.createElement("tr");
     let date = new Date();
 
-    rewNow.innerHTML = `<td><b>${carnet}</b></td>
+    newRow.innerHTML = `<td><b>${carnet}</b></td>
     <td><b>${schedule}</b></td>
     <td><b>${date.toLocaleString()}</b></td>
     <td><b>${late}</b></td>`;
@@ -18,20 +19,20 @@ function addStudent(carnet, schedule, late, tbody) {
     newBtn.classList.add("btn");
     newBtn.classList.add("btn-danger");
     newBtn.innerText ="Drop";
-    newBtn.value = idCounter;
+    newBtn.value = idContainer;
 
     cellcontainer.appendChild(newBtn);
     newRow.appendChild(cellcontainer);
 
-    newBt.addEventListener("click", event => {
+    newBtn.addEventListener("click", event => {
         let idElement = event.srcElement.value;
 
-        let elementNode = document.querySelector(`tr>td>button[value = '{$idElement}']`).parentElement.parentElement;
-         tbody.removeChild(ElementNode);
-    })
+        let elementNode = document.querySelector(`tr>td>button[value = '${idElement}']`).parentElement.parentElement;
+         tbody.removeChild(elementNode);
+    });
 
 
-    tbody.appendChild(rewNow);
+    tbody.appendChild(newRow);
 }
 
 window.onload = () =>{
