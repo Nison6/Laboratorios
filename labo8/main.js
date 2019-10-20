@@ -44,6 +44,8 @@ window.onload = () =>{
 
     var carnetRegex = new RegExp("^[0-9]{8}$");
 
+
+    
     submit_btn.addEventListener("click", function(){
         let carnet = carnet_field.value;
         let schedule = schedulefield_field.options[schedulefield_field.selectedIndex].text;
